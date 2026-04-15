@@ -27,32 +27,28 @@ export default function Login() {
   }
 
   return (
-    <main style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '80px 2rem' }}>
+    <main style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", padding: "80px 2rem" }}>
       <Navbar />
-      <div style={{ background: '#fff', border: '0.5px solid rgba(59,184,158,0.2)', borderRadius: '20px', padding: '40px', width: '100%', maxWidth: '420px' }}>
-        <h2 style={{ fontSize: '24px', fontWeight: 700, color: '#0f2f2a', marginBottom: '6px' }}>Welcome back</h2>
-        <p style={{ fontSize: '14px', color: '#4a7a72', marginBottom: '28px' }}>Sign in to continue learning.</p>
-
-        <div style={{ marginBottom: '16px' }}>
-          <label style={{ fontSize: '12px', fontWeight: 500, color: '#4a7a72', display: 'block', marginBottom: '6px' }}>Email address</label>
+      <div style={{ background: "#fff", border: "1px solid rgba(59,184,158,0.2)", borderRadius: "20px", padding: "40px", width: "100%", maxWidth: "420px" }}>
+        <h2 style={{ fontSize: "24px", fontWeight: 700, color: "#0f2f2a", marginBottom: "6px" }}>Welcome back</h2>
+        <p style={{ fontSize: "14px", color: "#4a7a72", marginBottom: "28px" }}>Sign in to continue learning.</p>
+        <div style={{ marginBottom: "16px" }}>
+          <label style={{ fontSize: "12px", fontWeight: 500, color: "#4a7a72", display: "block", marginBottom: "6px" }}>Email address</label>
           <input type="email" placeholder="you@example.com" value={form.email}
             onChange={e => setForm({...form, email: e.target.value})}
-            style={{ width: '100%', padding: '10px 14px', border: '0.5px solid rgba(59,184,158,0.3)', borderRadius: '10px', fontSize: '14px', fontFamily: 'Inter,sans-serif', outline: 'none', color: '#0f2f2a', background: '#f8fdfc' }} />
+            style={{ width: "100%", padding: "10px 14px", border: "1px solid rgba(59,184,158,0.3)", borderRadius: "10px", fontSize: "14px", outline: "none", color: "#0f2f2a", background: "#f8fdfc" }} />
         </div>
-
-        <div style={{ marginBottom: '24px' }}>
-          <label style={{ fontSize: '12px', fontWeight: 500, color: '#4a7a72', display: 'block', marginBottom: '6px' }}>Password</label>
-          <input type="password" placeholder="••••••••" value={form.password}
+        <div style={{ marginBottom: "24px" }}>
+          <label style={{ fontSize: "12px", fontWeight: 500, color: "#4a7a72", display: "block", marginBottom: "6px" }}>Password</label>
+          <input type="password" placeholder="password" value={form.password}
             onChange={e => setForm({...form, password: e.target.value})}
-            style={{ width: '100%', padding: '10px 14px', border: '0.5px solid rgba(59,184,158,0.3)', borderRadius: '10px', fontSize: '14px', fontFamily: 'Inter,sans-serif', outline: 'none', color: '#0f2f2a', background: '#f8fdfc' }} />
+            style={{ width: "100%", padding: "10px 14px", border: "1px solid rgba(59,184,158,0.3)", borderRadius: "10px", fontSize: "14px", outline: "none", color: "#0f2f2a", background: "#f8fdfc" }} />
         </div>
-
-        <button onClick={handleSubmit} style={{ width: '100%', padding: '12px', background: 'linear-gradient(135deg,#1a5c52,#2a8a78)', border: 'none', borderRadius: '12px', color: '#fff', fontSize: '15px', fontWeight: 600, cursor: 'pointer', fontFamily: 'Inter,sans-serif' }}>
-          Sign in →
+        <button onClick={handleSubmit} style={{ width: "100%", padding: "12px", background: "linear-gradient(135deg,#1a5c52,#2a8a78)", border: "none", borderRadius: "12px", color: "#fff", fontSize: "15px", fontWeight: 600, cursor: "pointer" }}>
+          Sign in
         </button>
-
-        <p style={{ textAlign: 'center', fontSize: '13px', color: '#4a7a72', marginTop: '16px' }}>
-          Don't have an account? <Link href="/register" style={{ color: '#2a8a78', textDecoration: 'none', fontWeight: 500 }}>Sign up free</Link>
+        <p style={{ textAlign: "center", fontSize: "13px", color: "#4a7a72", marginTop: "16px" }}>
+          No account? <Link href="/register" style={{ color: "#2a8a78", textDecoration: "none" }}>Sign up free</Link>
         </p>
       </div>
     </main>
